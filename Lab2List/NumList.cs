@@ -18,13 +18,13 @@ namespace Lab2List
 
         public NumList(int size, int min, int max) 
         {
-            generate(size, min, max);
+            Generate(size, min, max);
             return;
         }
 
         public NumList() { }
 
-        public void generate(int size, int min, int max) 
+        public void Generate(int size, int min, int max) 
         { 
             Random rnd = new Random();
             nums = new LinkedList<int>();
@@ -34,7 +34,7 @@ namespace Lab2List
             }
         }
 
-        public void cleanse()
+        public void Cleanse()
         {
             int divisor = this.nums.First();
             List<int> toDelete = new List<int>();
@@ -48,7 +48,7 @@ namespace Lab2List
             foreach (int i in toDelete) { this.nums.Remove(i); }
         }
 
-        public void divide()
+        public void Divide()
         {
             LinkedListNode<int> current = this.nums.First;
             List<LinkedListNode<int>> marks = new List<LinkedListNode<int>>();
@@ -65,5 +65,17 @@ namespace Lab2List
             }
             foreach(LinkedListNode<int> mark in marks) { nums.AddAfter(mark, 0); }
         }
+
+        public int CountEven(isEven func)
+        {
+            int count = 0;
+            foreach (int i in this.nums)
+            {
+                if (func(i)) { count++; }
+            }
+            return count;
+        }
+
+        public delegate bool isEven(int i);
     }
 }

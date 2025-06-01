@@ -40,6 +40,12 @@
             numSize = new NumericUpDown();
             numMin = new NumericUpDown();
             numMax = new NumericUpDown();
+            btnLambda = new Button();
+            lblSum = new Label();
+            btnFor = new Button();
+            btnForeach = new Button();
+            btnOps = new Button();
+            btnMets = new Button();
             ((System.ComponentModel.ISupportInitialize)numSize).BeginInit();
             ((System.ComponentModel.ISupportInitialize)numMin).BeginInit();
             ((System.ComponentModel.ISupportInitialize)numMax).BeginInit();
@@ -160,11 +166,76 @@
             numMax.TabIndex = 14;
             numMax.Value = new decimal(new int[] { 1000, 0, 0, 0 });
             // 
+            // btnLambda
+            // 
+            btnLambda.Location = new Point(12, 206);
+            btnLambda.Name = "btnLambda";
+            btnLambda.Size = new Size(310, 23);
+            btnLambda.TabIndex = 15;
+            btnLambda.Text = "Посчитать чёт и нечет с помощью лямбды";
+            btnLambda.UseVisualStyleBackColor = true;
+            btnLambda.Click += btnLambda_Click;
+            // 
+            // lblSum
+            // 
+            lblSum.AutoSize = true;
+            lblSum.Location = new Point(12, 251);
+            lblSum.Name = "lblSum";
+            lblSum.Size = new Size(252, 15);
+            lblSum.TabIndex = 16;
+            lblSum.Text = "Сумма квадратов чётных чисел от 1 до 10:";
+            // 
+            // btnFor
+            // 
+            btnFor.Location = new Point(12, 269);
+            btnFor.Name = "btnFor";
+            btnFor.Size = new Size(310, 23);
+            btnFor.TabIndex = 17;
+            btnFor.Text = "С помощью for";
+            btnFor.UseVisualStyleBackColor = true;
+            btnFor.Click += btnFor_Click;
+            // 
+            // btnForeach
+            // 
+            btnForeach.Location = new Point(12, 298);
+            btnForeach.Name = "btnForeach";
+            btnForeach.Size = new Size(310, 23);
+            btnForeach.TabIndex = 18;
+            btnForeach.Text = "С помощью foreach";
+            btnForeach.UseVisualStyleBackColor = true;
+            btnForeach.Click += btnForeach_Click;
+            // 
+            // btnOps
+            // 
+            btnOps.Location = new Point(12, 327);
+            btnOps.Name = "btnOps";
+            btnOps.Size = new Size(310, 23);
+            btnOps.TabIndex = 19;
+            btnOps.Text = "С помощью операторов запросов LINQ";
+            btnOps.UseVisualStyleBackColor = true;
+            btnOps.Click += btnOps_Click;
+            // 
+            // btnMets
+            // 
+            btnMets.Location = new Point(12, 356);
+            btnMets.Name = "btnMets";
+            btnMets.Size = new Size(310, 23);
+            btnMets.TabIndex = 20;
+            btnMets.Text = "С помощью методов расширения LINQ";
+            btnMets.UseVisualStyleBackColor = true;
+            btnMets.Click += btnMets_Click;
+            // 
             // frmMain
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(920, 564);
+            Controls.Add(btnMets);
+            Controls.Add(btnOps);
+            Controls.Add(btnForeach);
+            Controls.Add(btnFor);
+            Controls.Add(lblSum);
+            Controls.Add(btnLambda);
             Controls.Add(numMax);
             Controls.Add(numMin);
             Controls.Add(numSize);
@@ -201,5 +272,11 @@
         private NumericUpDown numSize;
         private NumericUpDown numMin;
         private NumericUpDown numMax;
+        private Button btnLambda;
+        private Label lblSum;
+        private Button btnFor;
+        private Button btnForeach;
+        private Button btnOps;
+        private Button btnMets;
     }
 }
